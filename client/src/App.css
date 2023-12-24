@@ -1,0 +1,43 @@
+.app{
+    display: flex;
+    align-items: center;
+    width: 95%;
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100vh - 80px);
+    margin: 0 auto;
+}
+
+.app-main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+.app-left{
+    width: 40%;
+
+}
+
+.app-right{
+    width: 60%;
+    
+}
+
+@media screen and (max-width: 768px) {
+    .app{
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem;
+        gap: 2rem;
+    }
+    .app-left{
+        width: 100%;
+    }
+    .app-right{
+        width: 100%;
+    }
+}
