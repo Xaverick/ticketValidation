@@ -14,3 +14,16 @@ module.exports.isLoggedIn = async  (req, res, next) => {
     }
 }
 
+
+module.exports.isVerified = async (req, res, next) => {
+    const token = req.signedCookies.jwt;
+    if(token){
+        const decoded = jwt.verify(token, `${process.env.SECRET}`);
+        const user = await User.findById(decoded.id);
+        if(user.verified) next();
+        else res.status(400).json('not verified');
+    }
+    else{
+        res.status(400).json('no token');
+    }
+}

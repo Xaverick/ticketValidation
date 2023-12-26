@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const uuid4 = require('uuid4');
 const schema = mongoose.Schema;
 
 
@@ -18,19 +17,18 @@ const userSchema = new schema({
         max: 255,
 
     },
-
-    qr_id: {
+    
+    password: {
         type: String,
-        default: uuid4(),
         required: true,
-        unique: true,
+        min: 6,
+        max: 1024,
     },
 
-    validated: {
+    verified: {
         type: Boolean,
         default: false,
     },
-    
 
 });
 
