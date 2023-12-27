@@ -36,6 +36,7 @@ module.exports.generateQRCode = async (req, res) => {
 
 };
 
+
 const sendTicket = async (email,qr_id) => {
 
     let config = {

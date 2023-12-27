@@ -172,7 +172,7 @@ module.exports.forgotPassword = async (req, res) => {
                     button: {
                         color: '#DC4D2F',
                         text: 'Click here',
-                        link: `http://localhost:3000/user/resetpassword/${user._id}/${token}`
+                        link: `http://localhost:4000/user/resetpassword/${user._id}/${token}`
                     }
                 },
                 outro: 'If you did not request a password reset, no further action is required on your part.'

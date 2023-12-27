@@ -2,7 +2,7 @@ import { useState , useEffect} from 'react'
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
-import Forms from './component/form/form.jsx'
+import Forms from './component/Registerform/form.jsx'
 import QRCode from './component/qrcode/QrCode.jsx'
 import './App.css';
 
